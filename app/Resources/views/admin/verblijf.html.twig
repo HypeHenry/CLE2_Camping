@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <div id="index-banner" class="parallax-container">
+        <div class="section no-pad-bot">
+            <div class="container">
+                <br><br>
+                <h1 class="header center white-text lighten-1">Verblijf in een Camping</h1>
+
+                <br><br>
+
+            </div>
+        </div>
+        <div class="parallax"><img src="{{ asset('img/verblijf.jpg')}}" alt="Unsplashed background img 1"></div>
+    </div>
+
+
+    <div class="container">
+        <div class="section">
+
+            <!--   Icon Section   -->
+            <div class="row">
+                <div class="col s6 m6">
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="{{ asset('img/tent.jpg')}}">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">Tent<i class="material-icons right">more_vert</i></span>
+                            <p><a href="#">Klik hier voor meer informatie</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">Tent<i class="material-icons right">close</i></span>
+                            <p>Enkele bungalowtenten zijn extra luxe ingericht met net iets meer gemak en comfort. Deze accommodatie staat op een geëgaliseerde harde ondergrond en beschikt over drie slaapcompartimenten met echte bedden, dekbedden en kussens. De ruime voortent beschikt over een tafel met stoelen, die ook buiten te gebruiken zijn. De bungalowtent is van vele gemakken voorzien. Van een elektriciteitsaansluiting en kookgelegenheid met compleet keuken- en kookgerei tot een koelkast, magnetron en koffiezetapparaat. Op het grasveld voor de bungalowtent staat een partytent waaronder u kunt genieten van de kabbelende beek of gezellig ontbijten of dineren.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s6 m6">
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="{{ asset('img/caravan.jpg')}}">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">Caravan<i class="material-icons right">more_vert</i></span>
+                            <p><a href="#">Klik hier voor meer informatie</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">Caravan<i class="material-icons right">close</i></span>
+                            <p>Heerlijk genieten van de Zeeuwse natuur op deze ruim opgezette camperplaatsen, met een gemiddelde grootte van wel 60 m2.
+
+                                Elektriciteit is op elke plaats aanwezig en een camperverzorgingsplaats, gesitueerd op een centrale plaats (loospunt vuil water, chemisch toilet en watertappunt).
+
+                                De camperplaatsen zijn gelegen aan de beek, waar kinderen kunnen spelen en het zelfs mogelijk is te vissen. Er is een picknicktafel aanwezig..</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

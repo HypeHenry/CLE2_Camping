@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html data-whatinput="initial" data-whatintent="mouse" class=" whatinput-types-initial"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta charset="UTF-8">
+        <title>Camping Ochtendgloren</title>
+        {% block stylesheet %} {% endblock %}
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+            <link rel="stylesheet" href="{{ asset('css/foundation.css') }}">
+            <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+            <link rel="stylesheet" href="{{ asset('pickadate/lib/themes/default.css') }}">
+            <link rel="stylesheet" href="{{ asset('pickadate/lib/themes/default.date.css') }}">
+            <link rel="stylesheet" href="{{ asset('css/materialize.css') }}">
+            <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <meta class="foundation-mq"></head>
+    <body>
+
+        <!-- Start Top Bar -->
+        <nav class="white camp" role="navigation">
+            <div class="nav-wrapper container">
+                <a id="logo-container" href="#" class="brand-logo"><img src="{{ asset('img/campinglogo.svg') }}" class="campimg"></a>
+                <ul class="right hide-on-med-and-down">
+                    <li class="active"><a href="{{ path('home') }}">Home</a></li>
+                    <li><a href="{{ path('verblijf') }}">Verblijfsmogelijkheid</a></li>
+                    <li><a href="{{ path('faciliteiten') }}">Faciliteiten</a></li>
+                    <li><a href="{{ path('contact') }}">Contact</a></li>
+                    {% if not is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                        <li><a href="{{ path('fos_user_security_login') }}"><i class="material-icons">assignment_ind</i></a></li>
+                    {% endif %}
+                    {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                        <li role="menuitem"><a href="{{ path('home') }}">Home</a></li>
+                        <li role="menuitem"><a href="{{ path('index_clients') }}">Klanten</a></li>
+                        <li role="menuitem"><a href="{{ path('reservations') }}">Reserveringen</a></li>
+                        <li><a href="{{ path('fos_user_security_logout') }}"><i class="material-icons">assignment_ind</i></a></li>
+
+                    {% endif %}
+                </ul>
+
+                <ul id="nav-mobile" class="sidenav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="verblijfsmogelijkheid.html">Verblijfsmogelijkheid</a></li>
+                    <li><a href="faciliteiten.html">Faciliteiten</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    {% if not is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                        <li><a href="{{ path('fos_user_security_login') }}"><i class="material-icons">assignment_ind</i></a></li>
+                    {% endif %}
+                    {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                        <li role="menuitem"><a href="{{ path('home') }}">Home</a></li>
+                        <li role="menuitem"><a href="{{ path('index_clients') }}">Klanten</a></li>
+                        <li role="menuitem"><a href="{{ path('reservations') }}">Reserveringen</a></li>
+                        <li><a href="{{ path('fos_user_security_logout') }}"><i class="material-icons">assignment_ind</i></a></li>
+
+                    {% endif %}
+                </ul>
+                <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            </div>
+        </nav>
+
+    <!-- End Top Bar -->
+
+    <br>
+    
+    
+    {% block body %} {% endblock %}
+
+
+        <footer class="page-footer brown lighten-1">
+            <div class="container">
+                <div class="row">
+                    <div class="col s6">
+                        <h5 class="white-text">Snel naar </h5>
+                        <ul>
+                            <li><a class="white-text" href="verblijfsmogelijkheid.html">Accomondaties</a></li>
+                            <li><a class="white-text" href="login.html">Boeken</a></li>
+                        </ul>
+                    </div>
+                    <div class="col s6">
+                        <h5 class="white-text">Contact</h5>
+                        <ul>
+                            <li><a class="white-text" ><i class="material-icons">map</i>Helleweg 8, 4325 LB Renesse</a></li>
+                            <li><a class="white-text" ><i class="material-icons">explore</i>Provincie: Zeeland</a></li>
+                            <li><a class="white-text" ><i class="material-icons">phone</i>Telefoon: 0111 468 282</a></li>
+                            <li><a class="white-text" ><i class="material-icons">email</i>Email: info@campingochtendgloren.nl</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container">
+                    Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+                </div>
+            </div>
+        </footer>
+    <script>
+      $(document).foundation();
+    </script>
+
+        <script src="{{ asset('js/vendor/jquery.js') }}"></script>
+        <script src="{{ asset('js/vendor/what-input.js') }}"></script>
+        <script src="{{ asset('js/vendor/foundation.js') }}"></script>
+        <script src="{{ asset('js/app.js') }}"></script>
+        <script src="{{ asset('pickadate/lib/picker.js') }}"></script>
+        <script src="{{ asset('pickadate/lib/picker.date.js') }}"></script>
+        <script src="{{ asset('https://code.jquery.com/jquery-2.1.1.min.js') }}"></script>
+        <script src="{{ asset('js/materialize.js') }}"></script>
+        <script src="{{ asset('js/init.js') }}"></script>
+        <script>
+            $('.datepicker').pickadate(
+              { 
+                format: 'dd-mm-yyyy',
+                formatSubmit: 'dd-mm-yyyy'
+              }
+              );
+        </script>
+
+    </body>
+</html>

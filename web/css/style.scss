@@ -1,0 +1,71 @@
+$thema-home: #381027;
+$thema-home2: #73564a;
+
+
+.breadcrumb{
+    color: black;
+}
+.camp{
+    height: auto;
+}
+.campimg{
+    height: 5.3rem;
+    top: auto;
+}
+
+nav ul a,
+nav .brand-logo {
+  color: #444;
+}
+
+nav ul a,
+nav .brand-logo  img{
+    height: 6.4rem;
+    padding-top: 5.4rem;
+}
+
+p {
+  line-height: 2rem;
+}
+
+.sidenav-trigger {
+  color: $thema-home2;
+}
+
+.parallax-container {
+  width: 100%;
+  min-height: 32rem;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+.parallax-container .section {
+  width: 100%;
+}
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
